@@ -1,0 +1,44 @@
+{
+  "name": "mobx-mirror-observable",
+  "description": "Two-way MobX sync across same-origin windows using BroadcastChannels",
+  "version": "1.0.0",
+  "author": "Kieran Harte",
+  "license": "MIT",
+  "keywords": [
+    "mobx",
+    "mirror",
+    "observable",
+    "sync",
+    "window"
+  ],
+  "homepage": "https://github.com/kieran-harte/mobx-mirror-observable",
+  "bugs": "https://github.com/kieran-harte/mobx-mirror-observable/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kieran-harte/mobx-mirror-observable.git"
+  },
+  "main": "./dist/mirrorObservable.js",
+  "module": "./dist/mirrorObservable.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/mirrorObservable.js",
+      "import": "./dist/mirrorObservable.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/mirrorObservable.ts --dts --format esm,cjs --clean"
+  },
+  "peerDependencies": {
+    "mobx": "^6.0.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3",
+    "mobx": "^6.0.0"
+  }
+}
